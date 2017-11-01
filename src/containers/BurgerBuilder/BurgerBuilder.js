@@ -4,6 +4,13 @@ import Burger from './../../components/Burger/Burger';
 import BuildControls from './../../components/BuildControls/BuildControls';
 import Paper from 'material-ui/Paper';
 
+const BURGER_PRICE = {
+	salad: 1.4,
+	cheese: 0.8,
+	bacon: 1.0,
+	meat: 2.4
+}
+
 class BurgerBuilder extends React.Component {
 
 	state = {
@@ -29,7 +36,16 @@ class BurgerBuilder extends React.Component {
 
 	// Halders for BuildControls
 	addIngredientHandler = (type) => {
+		const updatedCount = this.state.ingredients[type] + 1;
+		const updatedPrice = this.state.price + BURGER_PRICE[type];
 
+		const updatedIngredients = {...this.state.ingredients};
+		updatedIngredients[type] = updatedCount;
+
+		this.setState({
+			ingredients: updatedIngredients,
+			price: updatedPrice
+		});
 	}
 
 	removeIngredientHandler = (type) => {
