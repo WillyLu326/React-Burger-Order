@@ -14,11 +14,19 @@ const BuildControls = (props) => {
     left: '5%',
     right: '5%'
   }
+
+  const controls = [
+    { label: 'Salad', type: 'salad' },
+    { label: 'Bacon', type: 'bacon' },
+    { label: 'Cheese', type: 'cheese' },
+    { label: 'Meat', type: 'meat' }
+  ]
+
   return (
     <Paper style={style} zDepth={3}>
       {
-        props.ingredients.map((ingredient, index) => {
-          return <BuildControl ingredient={ingredient} key={index} />
+        controls.map((ingredient, index) => {
+          return <BuildControl label={ingredient.label} key={index} />
         })
       }
     </Paper>

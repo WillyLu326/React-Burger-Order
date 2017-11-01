@@ -8,13 +8,15 @@ class BurgerBuilder extends React.Component {
 
 	state = {
 		ingredients: {
-			salad: 1,
-			cheese: 1,
-			meat: 2,
-			bacon: 2
-		}
+			salad: 0,
+			cheese: 0,
+			meat: 0,
+			bacon: 0
+		},
+		price: 0.6
 	}
 
+	// Paper Style
 	paperStyle = {
 		position: 'relative',
 		width: '90%',
@@ -25,13 +27,23 @@ class BurgerBuilder extends React.Component {
 		margin: '0px 0px 16px 0px'
 	}
 
+	// Halders for BuildControls
+	addIngredientHandler = (type) => {
+
+	}
+
+	removeIngredientHandler = (type) => {
+
+	}
+
 	render() {
 		return (
 			<Aux>
 				<Paper style={this.paperStyle} zDepth={2}>
 					<Burger ingredients={this.state.ingredients} />
 				</Paper>
-				<BuildControls ingredients={Object.keys(this.state.ingredients)} />
+				<BuildControls 
+					 />
 			</Aux>
 		);
 	}
