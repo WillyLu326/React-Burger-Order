@@ -69,7 +69,8 @@ class BurgerBuilder extends React.Component {
 					<Burger ingredients={this.state.ingredients} />
 				</Paper>
 				<BuildControls 
-					 />
+					addIngredient={this.addIngredientHandler}
+					removeIngredient={this.removeIngredientHandler} />
 			</Aux>
 		);
 	}

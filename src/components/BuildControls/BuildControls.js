@@ -26,7 +26,12 @@ const BuildControls = (props) => {
     <Paper style={style} zDepth={3}>
       {
         controls.map((control, index) => {
-          return <BuildControl label={control.label} key={index} />
+          return (
+            <BuildControl 
+              label={control.label} key={index}
+              added={() => props.addIngredient(control.type)}
+              removed={() => props.removeIngredient(control.type)} />
+          );
         })
       }
     </Paper>
