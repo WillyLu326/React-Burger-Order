@@ -49,7 +49,17 @@ class BurgerBuilder extends React.Component {
 	}
 
 	removeIngredientHandler = (type) => {
+		const updatedCount = this.state.ingredients[type] - 1;
+		if (updatedCount < 0) return ;
+		const updatedPrice = this.state.price - BURGER_PRICE[type];
 
+		const updatedIngredients = {...this.state.ingredients};
+		updatedIngredients[type] = updatedCount;
+
+		this.setState({
+			ingredients: updatedIngredients,
+			price: updatedPrice
+		});
 	}
 
 	render() {
