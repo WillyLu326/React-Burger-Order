@@ -7,8 +7,9 @@
   padding: 8px;
 }
 
-.ingredient {
+.label {
   flex: 1;
+  font-weight: bold;
 }
 
 .fab {

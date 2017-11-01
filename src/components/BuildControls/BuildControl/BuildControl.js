@@ -8,7 +8,7 @@ import classes from './BuildControl.css';
 const BuildControl = (props) => {
   return (
     <div className={classes.BuildControl}>
-      <div className={classes.ingredient}>{props.label}</div>
+      <div className={classes.label}>{props.label}</div>
       <div className={classes.fab}>
         <FloatingActionButton mini={true}>
           <ContentAdd />
