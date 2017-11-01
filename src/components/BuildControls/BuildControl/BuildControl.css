@@ -5,3 +5,11 @@
   text-align: center;
   align-items: center;
 }
+
+.ingredient {
+  flex: 1;
+}
+
+.fab {
+  flex: 1;
+}
