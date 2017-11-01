@@ -1,9 +1,12 @@
 import React from 'react';
-import Aux from './../../../hoc/Aux';
+
+import classes from './BuildControl.css';
 
 const BuildControl = (props) => {
   return (
-    <Aux></Aux>
+    <div className={classes.BuildControl}>
+
+    </div>
   );
 }
 

@@ -1,0 +1,7 @@
+.BuildControl {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+  text-align: center;
+  align-items: center;
+}
