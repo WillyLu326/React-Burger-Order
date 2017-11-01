@@ -13,13 +13,15 @@ const BuildControl = (props) => {
       </div>
 
       <div className={classes.fab}>
-        <FloatingActionButton mini={true} onClick={props.added} >
+        <FloatingActionButton mini={true}
+          onClick={props.added} >
           <ContentAdd />
         </FloatingActionButton>
       </div>
 
       <div className={classes.fab}>
-        <FloatingActionButton mini={true} secondary={true} onClick={props.removed}>
+        <FloatingActionButton mini={true} secondary={true} disabled={props.count===0}
+          onClick={props.removed}>
           <ContentRemove />
         </FloatingActionButton>
       </div>

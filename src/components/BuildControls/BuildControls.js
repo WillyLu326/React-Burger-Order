@@ -29,6 +29,7 @@ const BuildControls = (props) => {
           return (
             <BuildControl 
               label={control.label} key={index}
+              count={props.ingredients[control.type]}
               added={() => props.addIngredient(control.type)}
               removed={() => props.removeIngredient(control.type)} />
           );
