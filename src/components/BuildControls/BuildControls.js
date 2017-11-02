@@ -21,7 +21,7 @@ const BuildControls = (props) => {
 
   const btnStyle = {
     color: 'white',
-    marginBottom: '16px'
+    margin: '16px 0'
   }
 
   const controls = [
