@@ -25,8 +25,8 @@ const BuildControls = (props) => {
   ]
 
   return (
-    <Paper style={style} zDepth={3}>
-      <p className={classes.price}>Price: ${props.price}</p>
+    <Paper style={style} zDepth={2}>
+      <p className={classes.price}>Price: ${props.price.toFixed(2)}</p>
       {
         controls.map((control, index) => {
           return (
