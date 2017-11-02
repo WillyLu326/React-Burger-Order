@@ -2,9 +2,11 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import BuildControl from './BuildControl/BuildControl';
 
+import classes from './BuildControls.css';
+
 const BuildControls = (props) => {
   const style = {
-    height: '280px',
+    height: 'auto',
     width: '90%',
     textAlign: 'center',
     display: 'inline-block',
@@ -24,7 +26,7 @@ const BuildControls = (props) => {
 
   return (
     <Paper style={style} zDepth={3}>
-      <p>Price: ${props.price}</p>
+      <p className={classes.price}>Price: ${props.price}</p>
       {
         controls.map((control, index) => {
           return (
