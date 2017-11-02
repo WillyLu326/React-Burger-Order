@@ -1,6 +1,8 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import BuildControl from './BuildControl/BuildControl';
+import RaisedButton from 'material-ui/RaisedButton';
+import FontIcon from 'material-ui/FontIcon';
 
 import classes from './BuildControls.css';
 
@@ -17,12 +19,17 @@ const BuildControls = (props) => {
     right: '5%'
   }
 
+  const btnStyle = {
+    color: 'white',
+    marginBottom: '16px'
+  }
+
   const controls = [
     { label: 'Salad', type: 'salad' },
     { label: 'Bacon', type: 'bacon' },
     { label: 'Cheese', type: 'cheese' },
     { label: 'Meat', type: 'meat' }
-  ]
+  ];
 
   return (
     <Paper style={style} zDepth={2}>
@@ -38,6 +45,12 @@ const BuildControls = (props) => {
           );
         })
       }
+      <RaisedButton 
+        label="Order Now" 
+        style={btnStyle}
+        primary={true} 
+        icon={<i class="material-icons #000000">add_shopping_cart</i>}
+      />
     </Paper>
   );
 }

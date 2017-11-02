@@ -1,3 +1,9 @@
 .price {
   font-weight: bold;
 }
+
+.material-icons.white {
+  color: white;
+}
+
+.material-icons.orange600 { color: #FB8C00; }
