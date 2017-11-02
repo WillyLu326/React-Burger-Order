@@ -49,7 +49,7 @@ const BuildControls = (props) => {
         label="Order Now" 
         style={btnStyle}
         primary={true} 
-        icon={<i class="material-icons #000000">add_shopping_cart</i>}
+        icon={<i class="material-icons md-light">add_shopping_cart</i>}
       />
     </Paper>
   );
