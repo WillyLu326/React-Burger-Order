@@ -24,6 +24,7 @@ const BuildControls = (props) => {
 
   return (
     <Paper style={style} zDepth={3}>
+      <p>Price: ${props.price}</p>
       {
         controls.map((control, index) => {
           return (
