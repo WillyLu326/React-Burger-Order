@@ -39,6 +39,10 @@ class BuildControls extends React.Component {
     this.setState({ modalStatus: true });
   }
 
+  closeModalHander = () => {
+    this.setState({ modalStatus: false });
+  }
+
   render () {
     return (
       <Paper style={this.style} zDepth={2}>
