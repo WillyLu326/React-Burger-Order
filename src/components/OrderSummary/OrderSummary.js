@@ -5,7 +5,7 @@ const OrderSummary = (props) => {
   const listItems = Object.keys(props.ingredients)
     .map((ingredient, index) => {
       return (
-        <ListItem key={index} primaryText={ingredient} rightIcon={<div>{props.ingredients[ingredient]}</div>} />
+        <ListItem key={index} primaryText={ingredient.toUpperCase()} rightIcon={<div>{props.ingredients[ingredient]}</div>} />
       );
     }) 
 
