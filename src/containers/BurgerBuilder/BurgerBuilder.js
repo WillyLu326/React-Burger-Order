@@ -63,6 +63,11 @@ class BurgerBuilder extends React.Component {
 		});
 	}
 
+	// Modal
+	modalControlHandler = (modalStatus) => {
+		this.setState({ openModal: modalStatus })
+	}
+
 	render() {
 		return (
 			<Aux>
@@ -73,7 +78,8 @@ class BurgerBuilder extends React.Component {
 					ingredients={this.state.ingredients}
 					price={this.state.price}
 					addIngredient={this.addIngredientHandler}
-					removeIngredient={this.removeIngredientHandler} />
+					removeIngredient={this.removeIngredientHandler}
+					modalControl={this.modalControlHandler} />
 			</Aux>
 		);
 	}
