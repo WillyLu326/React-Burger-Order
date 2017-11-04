@@ -20,7 +20,8 @@ class BurgerBuilder extends React.Component {
 			meat: 0,
 			bacon: 0
 		},
-		price: 0.6
+		price: 0.6,
+		openModal: false
 	}
 
 	// Paper Style
