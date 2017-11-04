@@ -35,7 +35,7 @@ class BuildControls extends React.Component {
     { label: 'Meat', type: 'meat' }
   ];
 
-  openModal = () => {
+  openModalHandler = () => {
     this.setState({ modalStatus: true });
   }
 
@@ -59,7 +59,7 @@ class BuildControls extends React.Component {
           style={this.btnStyle}
           primary={true} 
           icon={<i class="material-icons md-light">add_shopping_cart</i>}
-          onClick={this.openModal}
+          onClick={this.openModalHandler}
         />
       </Paper>
     );
