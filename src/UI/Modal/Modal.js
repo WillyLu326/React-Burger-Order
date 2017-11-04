@@ -1,6 +1,7 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
+import OrderSummary from './../../components/OrderSummary/OrderSummary';
 
 import classes from './Modal.css';
 
@@ -29,6 +30,9 @@ const Modal = (props) => {
         modal={true}
         open={props.status}
       >
+        <div className={classes.summaryContent}>
+          <OrderSummary />
+        </div>
       </Dialog>
     </div>
   );

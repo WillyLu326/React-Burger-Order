@@ -1,3 +1,8 @@
 .btn {
   margin: 0 5px;
 }
+
+.summaryContent {
+  width: 60%;
+  margin: auto;
+}
