@@ -2,9 +2,16 @@ import React from 'react';
 import { List, ListItem } from 'material-ui/List';
 
 const OrderSummary = (props) => {
+  const listItems = Object.keys(props.ingredients)
+    .map((ingredient, index) => {
+      return (
+        <ListItem key={index} primaryText={ingredient} rightIcon={<div>{props.ingredients[ingredient]}</div>} />
+      );
+    }) 
+
   return (
     <List>
-      <ListItem primaryText="Salad" rightIcon={<div>5</div>} />
+      {listItems}
     </List>
   );
 }

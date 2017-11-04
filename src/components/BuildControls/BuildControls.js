@@ -67,6 +67,7 @@ class BuildControls extends React.Component {
           onClick={this.openModalHandler}
         />
         <Modal 
+          ingredients={this.props.ingredients}
           status={this.state.modalStatus}
           open={this.openModalHandler}
           close={this.closeModalHander}

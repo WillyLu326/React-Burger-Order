@@ -31,7 +31,7 @@ const Modal = (props) => {
         open={props.status}
       >
         <div className={classes.summaryContent}>
-          <OrderSummary />
+          <OrderSummary ingredients={props.ingredients}/>
         </div>
       </Dialog>
     </div>
