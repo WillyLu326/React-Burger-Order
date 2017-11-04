@@ -6,6 +6,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 import classes from './BuildControls.css';
 
 class BuildControls extends React.Component {
+
+  state = {
+    modalStatus: false
+  }
+
   style = {
     height: 'auto',
     width: '90%',
@@ -30,6 +35,10 @@ class BuildControls extends React.Component {
     { label: 'Meat', type: 'meat' }
   ];
 
+  openModal = () => {
+    this.setState({ modalStatus: true });
+  }
+
   render () {
     return (
       <Paper style={this.style} zDepth={2}>
@@ -50,6 +59,7 @@ class BuildControls extends React.Component {
           style={this.btnStyle}
           primary={true} 
           icon={<i class="material-icons md-light">add_shopping_cart</i>}
+          onClick={this.openModal}
         />
       </Paper>
     );
