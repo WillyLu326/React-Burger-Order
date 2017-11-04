@@ -2,6 +2,7 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import BuildControl from './BuildControl/BuildControl';
 import RaisedButton from 'material-ui/RaisedButton';
+import Modal from './../../UI/Modal/Modal';
 
 import classes from './BuildControls.css';
 
@@ -62,8 +63,13 @@ class BuildControls extends React.Component {
           label="Order Now" 
           style={this.btnStyle}
           primary={true} 
-          icon={<i class="material-icons md-light">add_shopping_cart</i>}
+          icon={<i className="material-icons md-light">add_shopping_cart</i>}
           onClick={this.openModalHandler}
+        />
+        <Modal 
+          status={this.state.modalStatus}
+          open={this.openModalHandler}
+          close={this.closeModalHander}
         />
       </Paper>
     );

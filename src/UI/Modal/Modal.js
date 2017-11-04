@@ -24,9 +24,8 @@ class Modal extends React.Component {
           title="Burger Order Summary"
           actions={actions}
           modal={true}
-          opean={this.props.open}
+          open={this.props.status}
         >
-
         </Dialog>
       </div>
     );
