@@ -20,8 +20,7 @@ class BurgerBuilder extends React.Component {
 			meat: 0,
 			bacon: 0
 		},
-		price: 0.6,
-		openModal: false
+		price: 0.6
 	}
 
 	// Paper Style
@@ -63,10 +62,6 @@ class BurgerBuilder extends React.Component {
 		});
 	}
 
-	// Modal
-	modalControlHandler = (modalStatus) => {
-		this.setState({ openModal: modalStatus })
-	}
 
 	render() {
 		return (
@@ -79,7 +74,7 @@ class BurgerBuilder extends React.Component {
 					price={this.state.price}
 					addIngredient={this.addIngredientHandler}
 					removeIngredient={this.removeIngredientHandler}
-					modalControl={this.modalControlHandler} />
+				/>
 			</Aux>
 		);
 	}

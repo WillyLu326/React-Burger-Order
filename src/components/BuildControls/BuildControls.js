@@ -5,8 +5,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import classes from './BuildControls.css';
 
-const BuildControls = (props) => {
-  const style = {
+class BuildControls extends React.Component {
+  style = {
     height: 'auto',
     width: '90%',
     textAlign: 'center',
@@ -18,40 +18,43 @@ const BuildControls = (props) => {
     right: '5%'
   }
 
-  const btnStyle = {
+  btnStyle = {
     color: 'white',
     margin: '16px 0'
   }
 
-  const controls = [
+  controls = [
     { label: 'Salad', type: 'salad' },
     { label: 'Bacon', type: 'bacon' },
     { label: 'Cheese', type: 'cheese' },
     { label: 'Meat', type: 'meat' }
   ];
 
-  return (
-    <Paper style={style} zDepth={2}>
-      <p className={classes.price}>Price: ${props.price.toFixed(2)}</p>
-      {
-        controls.map((control, index) => {
-          return (
-            <BuildControl 
-              label={control.label} key={index}
-              count={props.ingredients[control.type]}
-              added={() => props.addIngredient(control.type)}
-              removed={() => props.removeIngredient(control.type)} />
-          );
-        })
-      }
-      <RaisedButton 
-        label="Order Now" 
-        style={btnStyle}
-        primary={true} 
-        icon={<i class="material-icons md-light">add_shopping_cart</i>}
-      />
-    </Paper>
-  );
+  render () {
+    return (
+      <Paper style={this.style} zDepth={2}>
+        <p className={classes.price}>Price: ${this.props.price.toFixed(2)}</p>
+        {
+          this.controls.map((control, index) => {
+            return (
+              <BuildControl 
+                label={control.label} key={index}
+                count={this.props.ingredients[control.type]}
+                added={() => this.props.addIngredient(control.type)}
+                removed={() => this.props.removeIngredient(control.type)} />
+            );
+          })
+        }
+        <RaisedButton 
+          label="Order Now" 
+          style={this.btnStyle}
+          primary={true} 
+          icon={<i class="material-icons md-light">add_shopping_cart</i>}
+        />
+      </Paper>
+    );
+  }
+
 }
 
 export default BuildControls;
