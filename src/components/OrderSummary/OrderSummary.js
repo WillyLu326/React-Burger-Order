@@ -16,6 +16,7 @@ const OrderSummary = (props) => {
 
   return (
     <Aux>
+      <p>Price: </p>
       <List>
         {listItems}
       </List>
