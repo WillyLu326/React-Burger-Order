@@ -3,6 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
 import OrderSummary from './../../components/OrderSummary/OrderSummary';
 
+import axios from './../../axios-order';
 import classes from './Modal.css';
 
 const Modal = (props) => {
