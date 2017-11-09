@@ -1,11 +1,14 @@
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
+import CircularProgress from 'material-ui/CircularProgress';
 import OrderSummary from './../../components/OrderSummary/OrderSummary';
 
 import classes from './Modal.css';
 
 const Modal = (props) => {
+
+
 
   const actions = [
     <RaisedButton 
