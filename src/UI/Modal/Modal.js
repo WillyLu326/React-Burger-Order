@@ -6,39 +6,40 @@ import OrderSummary from './../../components/OrderSummary/OrderSummary';
 
 import classes from './Modal.css';
 
-const Modal = (props) => {
+class Modal extends React.Component {
 
-
-
-  const actions = [
+  actions = [
     <RaisedButton 
       label="Cancel"
       secondary={true}
       className={classes.btn}
-      onClick={props.close}
+      onClick={this.props.close}
     />,
     <RaisedButton 
       label="Check out"
       primary={true}
       className={classes.btn}
-      onClick={props.checkout}
+      onClick={this.props.checkout}
     />
   ];
 
-  return (
-    <div>
-      <Dialog
-        title="Burger Order Summary"
-        actions={actions}
-        modal={true}
-        open={props.status}
-      >
-        <div className={classes.summaryContent}>
-          <OrderSummary ingredients={props.ingredients}/>
-        </div>
-      </Dialog>
-    </div>
-  );
-}
+  render () {
+    return (
+      <div>
+        <Dialog
+          title="Burger Order Summary"
+          actions={this.actions}
+          modal={true}
+          open={this.props.status}
+        >
+          <div className={classes.summaryContent}>
+            <OrderSummary ingredients={this.props.ingredients}/>
+          </div>
+        </Dialog>
+      </div>
+    );
+  }
+
+} 
 
 export default Modal;

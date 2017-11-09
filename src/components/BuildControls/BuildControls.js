@@ -41,6 +41,10 @@ class BuildControls extends React.Component {
     this.setState({ modalStatus: true });
   }
 
+  closeModalHandler = () => {
+    this.setState({ modalStatus: false });
+  }
+
   checkoutModalHander = () => {
     const orderInfo = {
       ingredients: this.props.ingredients,
@@ -55,11 +59,11 @@ class BuildControls extends React.Component {
     axios.post('/orders.json', orderInfo)
       .then(res => {
         console.log('order res', res);
-        this.setState({ modalStatus: false });
+        this.closeModalHandler();
       })
       .catch(err => {
         console.log('order err', err);
-        this.setState({ modalStatus: false });        
+        this.closeModalHandler();       
       });
   }
 
@@ -88,7 +92,7 @@ class BuildControls extends React.Component {
         <Modal 
           ingredients={this.props.ingredients}
           status={this.state.modalStatus}
-          open={this.openModalHandler}
+          close={this.closeModalHandler}
           checkout={this.checkoutModalHander}
         />
       </Paper>
