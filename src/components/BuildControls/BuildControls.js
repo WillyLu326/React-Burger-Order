@@ -59,7 +59,8 @@ class BuildControls extends React.Component {
 
     this.spinnerShowingHandler(true);
 
-    axios.post('/orders.json', orderInfo)
+    setTimeout(() => {
+      axios.post('/orders.json', orderInfo)
       .then(res => {
         console.log('order res', res);
         this.closeModalHandler();
@@ -70,6 +71,7 @@ class BuildControls extends React.Component {
         this.closeModalHandler();    
         this.spinnerShowingHandler(false);        
       });
+    }, 2000);
   }
 
   spinnerShowingHandler = (status) => {
