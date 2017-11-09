@@ -8,10 +8,6 @@ import classes from './Modal.css';
 
 class Modal extends React.Component {
 
-  state = {
-    orderSummaryStatus: true
-  }
-
   actions = [
     <RaisedButton 
       label="Cancel"
@@ -35,7 +31,7 @@ class Modal extends React.Component {
       </div>
     );
 
-    if (!this.state.orderSummaryStatus) {
+    if (!this.props.orderSummaryStatus) {
       orderSummary = (
         <CircularProgress />
       );

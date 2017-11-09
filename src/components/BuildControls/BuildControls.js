@@ -10,7 +10,8 @@ import classes from './BuildControls.css';
 class BuildControls extends React.Component {
 
   state = {
-    modalStatus: false
+    modalStatus: false,
+    spinnerShowing: false
   }
 
   style = {
@@ -56,15 +57,23 @@ class BuildControls extends React.Component {
       }
     }
 
+    this.spinnerShowingHandler(true);
+
     axios.post('/orders.json', orderInfo)
       .then(res => {
         console.log('order res', res);
         this.closeModalHandler();
+        this.spinnerShowingHandler(false);
       })
       .catch(err => {
         console.log('order err', err);
-        this.closeModalHandler();       
+        this.closeModalHandler();    
+        this.spinnerShowingHandler(false);        
       });
+  }
+
+  spinnerShowingHandler = (status) => {
+    this.setState({ spinnerShowing: status });
   }
 
   render () {
@@ -94,6 +103,7 @@ class BuildControls extends React.Component {
           status={this.state.modalStatus}
           close={this.closeModalHandler}
           checkout={this.checkoutModalHander}
+          spinnerShowing={this.state.spinnerShowing}
         />
       </Paper>
     );
