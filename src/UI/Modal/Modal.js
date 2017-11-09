@@ -18,7 +18,7 @@ const Modal = (props) => {
       label="Check out"
       primary={true}
       className={classes.btn}
-      onClick={props.close}
+      onClick={props.checkout}
     />
   ];
 

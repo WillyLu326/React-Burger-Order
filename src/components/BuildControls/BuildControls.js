@@ -40,7 +40,7 @@ class BuildControls extends React.Component {
     this.setState({ modalStatus: true });
   }
 
-  closeModalHander = () => {
+  checkoutModalHander = () => {
     this.setState({ modalStatus: false });
   }
 
@@ -70,7 +70,7 @@ class BuildControls extends React.Component {
           ingredients={this.props.ingredients}
           status={this.state.modalStatus}
           open={this.openModalHandler}
-          close={this.closeModalHander}
+          checkout={this.checkoutModalHander}
         />
       </Paper>
     );
