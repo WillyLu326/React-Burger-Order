@@ -8,6 +8,10 @@ import classes from './Modal.css';
 
 class Modal extends React.Component {
 
+  state = {
+    orderSummaryStatus: true
+  }
+
   actions = [
     <RaisedButton 
       label="Cancel"
@@ -24,6 +28,19 @@ class Modal extends React.Component {
   ];
 
   render () {
+
+    let orderSummary = (
+      <div className={classes.summaryContent}>
+        <OrderSummary ingredients={this.props.ingredients}/>
+      </div>
+    );
+
+    if (!this.state.orderSummaryStatus) {
+      orderSummary = (
+        <CircularProgress />
+      );
+    }
+
     return (
       <div>
         <Dialog
@@ -32,9 +49,7 @@ class Modal extends React.Component {
           modal={true}
           open={this.props.status}
         >
-          <div className={classes.summaryContent}>
-            <OrderSummary ingredients={this.props.ingredients}/>
-          </div>
+        {orderSummary} 
         </Dialog>
       </div>
     );
