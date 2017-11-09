@@ -4,6 +4,7 @@ import BuildControl from './BuildControl/BuildControl';
 import RaisedButton from 'material-ui/RaisedButton';
 import Modal from './../../UI/Modal/Modal';
 
+import axios from './../../axios-order';
 import classes from './BuildControls.css';
 
 class BuildControls extends React.Component {
@@ -41,7 +42,15 @@ class BuildControls extends React.Component {
   }
 
   checkoutModalHander = () => {
-    this.setState({ modalStatus: false });
+    const orderInfo = {
+      ingredients: this.props.ingredients,
+      price: this.props.price,
+      customer: {
+        name: 'Willy Lu',
+        address: 'New Jersy',
+        country: 'US'
+      }
+    }
   }
 
   render () {
