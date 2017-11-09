@@ -27,7 +27,9 @@ const Modal = (props) => {
 
   if (props.spinnerShowing) {
     orderSummary = (
-      <CircularProgress />
+      <div className={classes.center}>
+        <CircularProgress />
+      </div>
     );
   } else {
     orderSummary = (
