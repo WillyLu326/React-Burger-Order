@@ -62,7 +62,6 @@ class BurgerBuilder extends React.Component {
 		});
 	}
 
-
 	render() {
 		return (
 			<Aux>

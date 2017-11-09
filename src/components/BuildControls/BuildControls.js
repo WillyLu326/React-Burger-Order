@@ -14,6 +14,13 @@ class BuildControls extends React.Component {
     spinnerShowing: false
   }
 
+  controls = [
+    { label: 'Salad', type: 'salad' },
+    { label: 'Bacon', type: 'bacon' },
+    { label: 'Cheese', type: 'cheese' },
+    { label: 'Meat', type: 'meat' }
+  ];
+
   style = {
     height: 'auto',
     width: '90%',
@@ -31,13 +38,9 @@ class BuildControls extends React.Component {
     margin: '16px 0'
   }
 
-  controls = [
-    { label: 'Salad', type: 'salad' },
-    { label: 'Bacon', type: 'bacon' },
-    { label: 'Cheese', type: 'cheese' },
-    { label: 'Meat', type: 'meat' }
-  ];
-
+  /**
+   *  Control Modals
+   */
   openModalHandler = () => {
     this.setState({ modalStatus: true });
   }
@@ -56,9 +59,7 @@ class BuildControls extends React.Component {
         country: 'US'
       }
     }
-
     this.spinnerShowingHandler(true);
-
     setTimeout(() => {
       axios.post('/orders.json', orderInfo)
       .then(res => {
@@ -73,7 +74,10 @@ class BuildControls extends React.Component {
       });
     }, 2000);
   }
-
+  
+  /**
+   *  Control Spinner
+   */
   spinnerShowingHandler = (status) => {
     this.setState({ spinnerShowing: status });
   }
