@@ -51,6 +51,16 @@ class BuildControls extends React.Component {
         country: 'US'
       }
     }
+
+    axios.post('/orders.json', orderInfo)
+      .then(res => {
+        console.log('order res', res);
+        this.setState({ modalStatus: false });
+      })
+      .catch(err => {
+        console.log('order err', err);
+        this.setState({ modalStatus: false });        
+      });
   }
 
   render () {
