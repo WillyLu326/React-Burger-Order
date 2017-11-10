@@ -11,8 +11,12 @@ class Layout extends React.Component {
 		drawerOpen: false
 	}
 
-	burgerClickHandler = () => {
-		console.log('click burger');
+	burgerOpenHandler = () => {
+		this.setState({ drawerOpen: true })
+	}
+
+	burgerCloseHandler = () => {
+		this.setState({ drawerOpen: false })
 	}
 
 	render () {
@@ -20,8 +24,10 @@ class Layout extends React.Component {
 			<Aux>
 				<AppBar 
 					title="Burger Order"
-					onLeftIconButtonTouchTap={this.burgerClickHandler} />
-				<SideMenu open={this.state.drawerOpen} />
+					onLeftIconButtonTouchTap={this.burgerOpenHandler} />
+				<SideMenu 
+					open={this.state.drawerOpen} 
+					closed={this.burgerCloseHandler}/>
 				<main className={classes.Content}>
 					{this.props.children}
 				</main>
