@@ -11,10 +11,16 @@ class Layout extends React.Component {
 		drawerOpen: false
 	}
 
+	burgerClickHandler = () => {
+		console.log('click burger');
+	}
+
 	render () {
 		return (
 			<Aux>
-				<AppBar title="Burger Order" />
+				<AppBar 
+					title="Burger Order"
+					onLeftIconButtonTouchTap={this.burgerClickHandler} />
 				<SideMenu open={this.state.drawerOpen} />
 				<main className={classes.Content}>
 					{this.props.children}
