@@ -3,6 +3,7 @@ import Aux from './../../hoc/Aux';
 import Burger from './../../components/Burger/Burger';
 import BuildControls from './../../components/BuildControls/BuildControls';
 import Paper from 'material-ui/Paper';
+import BackgroundImage from './../../assets/images/tex8.jpg';
 
 const BURGER_PRICE = {
 	salad: 1.4,
@@ -30,8 +31,8 @@ class BurgerBuilder extends React.Component {
 		height: 'auto',
 		left: '5%',
 		right: '5%',
-		backgroundColor: '#6AB3F4',
-		margin: '0px 0px 16px 0px'
+		margin: '0px 0px 16px 0px',
+		backgroundImage: `url(${BackgroundImage})`
 	}
 
 	// Halders for BuildControls
