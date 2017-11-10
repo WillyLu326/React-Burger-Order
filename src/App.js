@@ -7,11 +7,11 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
-        <Layout>
-          <BurgerBuilder />
-        </Layout>
-      </MuiThemeProvider>
+        <MuiThemeProvider>
+          <Layout >
+            <BurgerBuilder />
+          </Layout>
+        </MuiThemeProvider>
     );
   }
 }

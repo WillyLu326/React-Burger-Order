@@ -9,7 +9,9 @@
 
 .label {
   flex: 1;
-  font-weight: bold;
+  position: relative;
+  float: right;
+  text-align: center;
 }
 
 .fab {

@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper';
 import BuildControl from './BuildControl/BuildControl';
 import RaisedButton from 'material-ui/RaisedButton';
 import Modal from './../../UI/Modal/Modal';
+import PanelBackgroundImage from './../../assets/images/panel-bg.jpg';
 
 import axios from './../../axios-order';
 import classes from './BuildControls.css';
@@ -23,14 +24,16 @@ class BuildControls extends React.Component {
 
   style = {
     height: 'auto',
-    width: '90%',
+    width: '98%',
     textAlign: 'center',
     display: 'inline-block',
     margin: 'auto',
     backgroundColor: '#EEE',
     position: 'absolute',
-    left: '5%',
-    right: '5%'
+    left: '1%',
+    right: '1%',
+    backgroundImage: `url(${PanelBackgroundImage})`,
+    backgroundPosition: 'center center'
   }
 
   btnStyle = {
