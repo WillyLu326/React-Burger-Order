@@ -20,7 +20,7 @@ const BuildControl = (props) => {
       <div className={classes.label}>
         <Chip style={chipStyle}> 
           <Avatar icon={<i className="material-icons">shop</i>} />
-          {props.label} 
+          <span className={classes.bold}> {props.label} </span>
         </Chip>
       </div>
 

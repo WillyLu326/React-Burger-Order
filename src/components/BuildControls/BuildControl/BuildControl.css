@@ -17,3 +17,7 @@
 .fab {
   flex: 1;
 }
+
+.bold {
+  font-weight: bold;
+}
