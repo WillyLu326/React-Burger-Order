@@ -3,7 +3,7 @@ import Aux from './../../hoc/Aux';
 import Burger from './../../components/Burger/Burger';
 import BuildControls from './../../components/BuildControls/BuildControls';
 import Paper from 'material-ui/Paper';
-import BackgroundImage from './../../assets/images/background.jpg';
+import BackgroundImage from './../../assets/images/bg-blue.png';
 
 const BURGER_PRICE = {
 	salad: 1.4,

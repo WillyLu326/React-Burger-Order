@@ -17,7 +17,7 @@ const Burger = (props) => {
 		.reduce((initArray, curtArray) => initArray = initArray.concat(curtArray), []);
 
 	if (convertedIngredients.length === 0) {
-		convertedIngredients = <p>Plz Add Some Ingredients</p>
+		convertedIngredients = <p className={classes.hint}>Plz Add Some Ingredients</p>
 	}
 
 	return (
